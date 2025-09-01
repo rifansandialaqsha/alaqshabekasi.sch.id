@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TK Al Aqsha</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4;
+            color: #1a202c;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1.5rem;
+        }
+        .header-bg {
+            background-image: url('https://media.snl.no/media/21846/article_topimage_al-aqsa.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            border-radius: 0.5rem;
+        }
+        .gallery-item img, .gallery-item iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background-color: #10b981;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="container flex justify-between items-center py-4">
+            <a href="#" class="text-xl md:text-2xl font-bold text-[#10b981] flex items-center">
+                <i class="fas fa-mosque mr-2"></i> TK Al Aqsha
+            </a>
+            <div class="hidden md:flex space-x-8 text-gray-700">
+                <a href="#beranda" class="hover:text-[#059669] transition duration-300 font-medium">Beranda</a>
+                <a href="#profil" class="hover:text-[#059669] transition duration-300 font-medium">Profil</a>
+                <a href="#galeri" class="hover:text-[#059669] transition duration-300 font-medium">Galeri</a>
+                <a href="#kontak" class="hover:text-[#059669] transition duration-300 font-medium">Kontak</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full shadow-lg">
+            <a href="#beranda" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 transition duration-300">Beranda</a>
+            <a href="#profil" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 transition duration-300">Profil</a>
+            <a href="#galeri" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 transition duration-300">Galeri</a>
+            <a href="#kontak" class="block py-3 px-6 text-gray-700 hover:bg-gray-100 transition duration-300">Kontak</a>
+        </div>
+    </nav>
+    <div class="pt-16"></div>
+
+    <!-- Header & Jumbotron -->
+    <header id="beranda" class="relative header-bg min-h-[50vh] flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 p-6 md:p-10">
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 animate-fade-in">TK Al Aqsha</h1>
+            <p class="text-base md:text-xl font-light max-w-2xl mx-auto animate-fade-in delay-200">Menumbuhkan generasi yang beriman, berakhlak mulia, cerdas, dan mandiri.</p>
+        </div>
+    </header>
+
+    <main class="container py-12">
+        <!-- Sambutan Kepala Sekolah -->
+        <section class="mb-12" id="sambutan">
+            <div class="card">
+                <h2 class="section-title text-2xl font-bold text-[#10b981]">Sambutan Kepala Sekolah</h2>
+                <div class="mt-8 text-gray-700 leading-relaxed">
+                    <p class="mb-4">Assalamu’alaikum warahmatullahi wabarakatuh</p>
+                    <p class="mb-4">Segala puji hanya bagi Allah Subhanahu wa Ta’ala, Tuhan semesta alam. Shalawat serta salam semoga tercurah kepada Nabi Muhammad ﷺ, keluarga, sahabat, dan seluruh umatnya hingga akhir zaman.</p>
+                    <p class="mb-4">Allah Ta’ala berfirman dalam Al-Qur’an:</p>
+                    <p class="mb-4 italic text-center text-[#059669] font-semibold">"Hai orang-orang yang beriman, peliharalah dirimu dan keluargamu dari api neraka..." <br>(QS. At-Tahrim: 6)</p>
+                    <p class="mb-4">Ayat ini menjadi pengingat bagi kita semua bahwa pendidikan anak bukan hanya tentang ilmu dunia, tetapi juga menanamkan akidah yang kokoh dan akhlak yang mulia sejak dini.</p>
+                    <p class="mb-4">TK kami hadir sebagai langkah awal perjalanan belajar anak-anak untuk bertumbuh dengan iman dan takwa, sambil mempersiapkan mereka menghadapi kehidupan global yang penuh tantangan. Di sini, pembelajaran tidak hanya mengajarkan membaca, menulis, dan berhitung, tetapi juga mengenalkan mereka pada nilai-nilai Islam, akhlak yang baik, kecintaan pada Al-Qur’an, serta kemampuan beradaptasi di era modern.</p>
+                    <p class="mb-4">Dengan kurikulum yang seimbang antara pendidikan karakter Islami dan keterampilan abad 21, kami berharap setiap anak menjadi pribadi yang shalih dan shalihah, cerdas, berakhlak mulia, serta mampu menjadi bagian dari masyarakat dunia dengan identitas keislaman yang kuat.</p>
+                    <p class="mb-4">Semoga Allah Ta’ala memberikan keberkahan pada setiap langkah kecil yang mereka tempuh di sekolah ini, hingga kelak mereka tumbuh menjadi generasi yang berilmu, beriman, dan bermanfaat bagi umat.</p>
+                    <p>Wassalamu’alaikum warahmatullahi wabarakatuh</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fasilitas Terbaik -->
+        <section class="mb-12">
+            <h2 class="section-title text-2xl font-bold text-[#10b981]">Dukungan Fasilitas Terbaik</h2>
+            <p class="mt-4 text-gray-600 mb-8 max-w-3xl">TK AL Aqsha berkomitmen untuk menyediakan dukungan fasilitas terbaik bagi para siswanya untuk belajar dan berkembang. Kami memiliki berbagai fasilitas modern dan lengkap untuk memastikan bahwa para siswa dapat belajar dengan nyaman dan optimal, serta mengembangkan bakat dan minat mereka.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#galeri" class="gallery-item h-64">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNzB1H7uJ2VlK6I4A9-jQ91xJ0l_x-3P9wX8wJ2Z-0Z5Y7rX5K_qM7-2E_2S0w=w1920-h1080-s-no-gm?authuser=0" alt="Fasilitas 1" class="w-full h-full object-cover rounded-lg">
+                </a>
+                <a href="#galeri" class="gallery-item h-64">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczO2k_R-tWq8J-5J1yF6tU0E8H0A4H-9K5wW5f-1eJ2-5vF8q-S4wL-2wV4-1p=w1920-h1080-s-no-gm?authuser=0" alt="Fasilitas 2" class="w-full h-full object-cover rounded-lg">
+                </a>
+                <a href="#galeri" class="gallery-item h-64">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPHF-e-w8z9k-L3x_Q4h1-4w-L9A8f1aL-8e4W-2f3b-5p-E_1qL-6W-9L-4u=w1920-h1080-s-no-gm?authuser=0" alt="Fasilitas 3" class="w-full h-full object-cover rounded-lg">
+                </a>
+                <a href="#galeri" class="gallery-item h-64">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczM_tB7d-bK1P-1x-W4j-p9a-8u-W5q-2f-5t-0h-5p-E_1qL-6W-9L-4u=w1920-h1080-s-no-gm?authuser=0" alt="Fasilitas 4" class="w-full h-full object-cover rounded-lg">
+                </a>
+            </div>
+            <div class="mt-8 text-center">
+                <a href="#galeri" class="inline-block bg-[#10b981] text-white py-3 px-8 rounded-full font-semibold hover:bg-[#059669] transition duration-300 shadow-lg">
+                    Galeri Fasilitas Sekolah
+                </a>
+            </div>
+        </section>
+
+        <!-- Guru dan Staf -->
+        <section class="mb-12">
+            <h2 class="section-title text-2xl font-bold text-[#10b981]">Guru dan Staf Berkualitas</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-white rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+                    <i class="fas fa-user-tie text-5xl text-[#059669] mb-4"></i>
+                    <h3 class="font-semibold text-lg">Kepala Sekolah</h3>
+                    <p class="text-gray-600 mt-2">Raihan</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+                    <i class="fas fa-user-graduate text-5xl text-[#059669] mb-4"></i>
+                    <h3 class="font-semibold text-lg">Wakil Kepala Bidang Kurikulum</h3>
+                    <p class="text-gray-600 mt-2">Rifan Sandi</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+                    <i class="fas fa-users text-5xl text-[#059669] mb-4"></i>
+                    <h3 class="font-semibold text-lg">Wakil Kepala Bidang Kesiswaan</h3>
+                    <p class="text-gray-600 mt-2">M. Rifqil</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <a href="#profil" class="inline-block bg-white text-[#10b981] py-3 px-8 rounded-full font-semibold border border-[#10b981] hover:bg-[#10b981] hover:text-white transition duration-300 shadow-lg">
+                    Selengkapnya
+                </a>
+            </div>
+        </section>
+
+        <!-- Testimoni Alumni -->
+        <section class="mb-12">
+            <div class="card bg-[#e6fffa] border-l-4 border-[#10b981] shadow-lg">
+                <h2 class="section-title text-2xl font-bold text-[#10b981]">Testimoni Alumni</h2>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-white rounded-xl shadow-md">
+                        <i class="fas fa-quote-left text-3xl text-[#10b981] mb-4"></i>
+                        <p class="italic text-gray-700">"TK Al Aqsha ini benar-benar membantu membentuk anak saya menjadi pribadi yang shalih, percaya diri, dan mandiri. Setiap hari ia pulang membawa cerita baru tentang pelajaran di sekolah."</p>
+                        <p class="mt-4 font-semibold text-[#059669]">- Abi Haidar</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-md">
+                        <i class="fas fa-quote-left text-3xl text-[#10b981] mb-4"></i>
+                        <p class="italic text-gray-700">"Alhamdulillah, sejak belajar di TK Al Aqsha anak saya semakin rajin sholat, hafal doa-doa, dan mengenal sopan santun kepada keluarga."</p>
+                        <p class="mt-4 font-semibold text-[#059669]">- Umi Alisa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pengumuman -->
+        <section id="pengumuman" class="mb-12">
+            <h2 class="section-title text-2xl font-bold text-[#10b981]">Pengumuman</h2>
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Pengumuman PPDB -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pendaftaran Siswa Tahun Ajaran 2026/2027</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">Telah dibuka Penerimaan Peserta Didik Baru (PPDB) TK Al Aqsha Bekasi untuk Tahun Ajaran 2026/2027. Sebagai TK Islam terpadu, kami berkomitmen untuk mewujudkan visi "Generasi yang bertaqwa kepada Allah SWT, berakhlak mulia, cerdas, terampil dan mandiri." Ayah dan Bunda yang ingin putra-putrinya mendapatkan pendidikan berkualitas dalam lingkungan Islami dapat segera mendaftarkan ananda.</p>
+                    <p class="text-gray-700 leading-relaxed">Untuk informasi lebih lanjut mengenai prosedur pendaftaran, silakan hubungi kami melalui telepon di <strong>(021) 8893944</strong> atau kunjungi kami langsung di alamat <strong>Jl. Bima Raya Blok A10, RT.012/RW.007, Harapan Jaya, Kec. Bekasi Utara</strong>. Mari bersama kita siapkan generasi terbaik untuk masa depan.</p>
+                </div>
+                <!-- Pengumuman Pembukaan SD -->
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pembukaan SD Al Aqsha Tahun Ajaran 2027/2028</h3>
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOxkC3-f5qE1lM1c8X5P-5m-7o-2u-7z-2-4o-7f-0p-0-4p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Poster Pembukaan SD" class="w-full h-auto rounded-lg shadow-md mt-4">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Halaman Profil -->
+        <section id="profil" class="mb-12 pt-12">
+            <div class="card">
+                <h2 class="section-title text-2xl font-bold text-[#10b981]">Profil Sekolah</h2>
+                <div class="mt-8 flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/e8GJogYH1mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-72 md:h-96 rounded-xl"></iframe>
+                    </div>
+                    <div class="w-full md:w-1/2 text-gray-700">
+                        <h3 class="text-xl font-bold text-[#059669] mb-4">Visi</h3>
+                        <p class="mb-6">Generasi yang bertaqwa kepada Allah SWT, berakhlak mulia, cerdas, terampil dan mandiri</p>
+                        
+                        <h3 class="text-xl font-bold text-[#059669] mb-4">Misi</h3>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Menanamkan kecintaan kepada Allah, Rasulullah SAW, dan Al-Qur’an sejak dini.</li>
+                            <li>Membiasakan ibadah dan akhlak Islami dalam kegiatan sehari-hari.</li>
+                            <li>Mengembangkan potensi anak melalui pembelajaran yang menyenangkan dan penuh kasih sayang.</li>
+                            <li>Menumbuhkan kemandirian, rasa tanggung jawab, dan kepedulian terhadap sesama.</li>
+                            <li>Menguatkan kerja sama antara sekolah dan orang tua dalam membentuk karakter anak yang shalih dan shalihah.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <h3 class="text-xl font-bold text-[#059669] mb-4">Struktur Organisasi</h3>
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczO2k_R-tWq8J-5J1yF6tU0E8H0A4H-9K5wW5f-1eJ2-5vF8q-S4wL-2wV4-1p=w1920-h1080-s-no-gm?authuser=0" alt="Struktur Organisasi" class="w-full md:w-3/4 lg:w-1/2 mx-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Halaman Galeri -->
+        <section id="galeri" class="mb-12 pt-12">
+            <div class="card">
+                <h2 class="section-title text-2xl font-bold text-[#10b981]">Galeri</h2>
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold text-[#059669] mb-4">Kegiatan Akademik dan Non-Akademik</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczN_K-wYf9v_wE_b-8w-X3c-f_5y-7k-5h-8p-0h-0p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Kegiatan 1" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczN_V-2yF-t9m-6j-4u-9e-1f-2e-3d-4c-6f-5h-5p-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Kegiatan 2" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczM_tB7d-bK1P-1x-W4j-p9a-8u-W5q-2f-5t-0h-5p-E_1qL-6W-9L-4u=w1920-h1080-s-no-gm?authuser=0" alt="Kegiatan 3" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczM_K-wYf9v_wE_b-8w-X3c-f_5y-7k-5h-8p-0h-0p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Kegiatan 4" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczO2k_R-tWq8J-5J1yF6tU0E8H0A4H-9K5wW5f-1eJ2-5vF8q-S4wL-2wV4-1p=w1920-h1080-s-no-gm?authuser=0" alt="Kegiatan 5" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczPHF-e-w8z9k-L3x_Q4h1-4w-L9A8f1aL-8e4W-2f3b-5p-E_1qL-6W-9L-4u=w1920-h1080-s-no-gm?authuser=0" alt="Kegiatan 6" class="rounded-lg">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-xl font-bold text-[#059669] mb-4">Sarana dan Prasarana Sekolah</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczL5gW9w-z1i-4-7t-3u-6r-5q-0h-0p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Sarana 1" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczOz-z5q-h9y-6o-3u-4r-5q-0h-0p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Sarana 2" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczNHC-p-Q-t8s-t5a-6u-2g-1u-5e-7t-2-8p-0h-0p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Sarana 3" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczOXJ-e-s-d-6f-5h-8p-0h-0p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Sarana 4" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczP3C-k-5e-t-8f-2h-3h-5f-8p-0h-0p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Sarana 5" class="rounded-lg">
+                        </div>
+                        <div class="gallery-item h-64">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczP7-l-h-t-6j-9f-8h-3h-5f-8p-0h-0p-2r-0q-0u-9v-4w=w1920-h1080-s-no-gm?authuser=0" alt="Sarana 6" class="rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak" class="mb-12 pt-12">
+            <div class="card">
+                <h2 class="section-title text-2xl font-bold text-[#10b981]">Hubungi Kami</h2>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="text-gray-700">
+                        <p class="mb-4 text-lg font-semibold">Kami senang mendengar Anda!</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-[#10b981] text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <span class="font-semibold block">Email:</span>
+                                    <a href="mailto:info@alaqshabekasi.sch.id" class="text-[#059669] hover:underline">info@alaqshabekasi.sch.id</a>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone-alt text-[#10b981] text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <span class="font-semibold block">Telepon:</span>
+                                    <a href="tel:(021) 8893944" class="text-[#059669] hover:underline">(021) 8893944</a>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-[#10b981] text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <span class="font-semibold block">Alamat:</span>
+                                    <p>Jl. Bima Raya Blok A10, RT.012/RW.007, Harapan Jaya, Kec. Bekasi Utara</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full h-80 rounded-xl overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.191632047326!2d106.9944365147696!3d-6.22926719543884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c9f091f09c7%3A0x6b4c1a2f6a7d0d08!2sTK%20Al%20Aqsha%20Bekasi!5e0!3m2!1sen!2sid!4v1628173456789!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#10b981] text-white py-8">
+        <div class="container text-center text-sm">
+            <p>&copy; 2024 TK Al Aqsha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
